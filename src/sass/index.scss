@@ -1,2 +1,106 @@
-@import './common';
-@import './example';
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+    header{
+        form.search-form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+            background-color: aqua;
+
+            input{
+                height: 36px;
+                border-radius: 18px 0 0 18px;
+                padding-left: 15px;
+                box-sizing: border-box;
+                border:1px solid rgb(0, 17, 255);
+            }
+            button{
+                height: 36px;
+                border-radius: 0 18px 18px 0;
+                box-sizing: border-box;
+                padding-left: 15px;
+                padding-right: 15px;
+                border: 1px solid rgb(0, 17, 255);
+            }
+            div{
+                display: flex;
+            }
+            input:hover, input:focus, input:active, input:not(:placeholder-shown){
+                border-color: rgb(21, 255, 0); 
+                & + button {
+                    border-color: rgb(21, 255, 0);
+                }
+            }
+        }
+    }
+    main{
+        padding: 30px 15px 85px 15px;
+        .gallery{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: -20px;
+            margin-left: -15px;
+            
+            .photo-card{
+                
+                @media screen and (max-width: 767px){
+                    flex-basis: 100%;
+                }
+                @media screen and (min-width: 768px) and (max-width: 1100px){
+                    flex-basis: calc(50% - 15px)
+                }
+                @media screen and (min-width: 1100px) and (max-width: 1500px) {
+                    flex-basis: calc(33% - 15px)
+                }
+                @media screen and (min-width: 1500px){
+                    flex-basis: calc(25% - 15px)
+                }
+                margin-top: 20px;
+                margin-left: 15px;
+                border: 1px solid rgba(128, 128, 128, 0.519);
+                &:hover{
+                    -webkit-box-shadow: 0px 0px 22px 14px rgba(242, 255, 77, 0.88), 0px 0px 31px 17px rgba(0, 160, 255, 0.68);
+                    box-shadow: 0px 0px 22px 14px rgba(242, 255, 77, 0.88), 0px 0px 31px 17px rgba(0, 160, 255, 0.68);
+                }
+
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                    height:calc(100% - 66.8px);
+                }
+                .info{
+                    display: flex;
+                    justify-content:space-between;
+                    padding: 15px;
+                }
+            }
+        }
+    }
+    footer{
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: aqua;
+        .load-more{
+            height: 36px;
+            border-radius: 18px;
+            padding: 0 20px;
+            border: 1px solid rgb(0, 17, 255);
+            &:hover,&:focus{
+                border-color: rgb(21, 255, 0);
+            }
+        }
+    }
+}

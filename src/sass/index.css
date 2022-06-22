@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+body header form.search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+  background-color: aqua;
+}
+
+body header form.search-form input {
+  height: 36px;
+  border-radius: 18px 0 0 18px;
+  padding-left: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #0011ff;
+}
+
+body header form.search-form button {
+  height: 36px;
+  border-radius: 0 18px 18px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 1px solid #0011ff;
+}
+
+body header form.search-form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body header form.search-form input:hover, body header form.search-form input:focus, body header form.search-form input:active, body header form.search-form input:not(:placeholder-shown) {
+  border-color: #15ff00;
+}
+
+body header form.search-form input:hover + button, body header form.search-form input:focus + button, body header form.search-form input:active + button, body header form.search-form input:not(:placeholder-shown) + button {
+  border-color: #15ff00;
+}
+
+body main {
+  padding: 30px 15px 85px 15px;
+}
+
+body main .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: -20px;
+  margin-left: -15px;
+}
+
+body main .gallery .photo-card {
+  margin-top: 20px;
+  margin-left: 15px;
+  border: 1px solid rgba(128, 128, 128, 0.519);
+}
+
+@media screen and (max-width: 767px) {
+  body main .gallery .photo-card {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  body main .gallery .photo-card {
+    -ms-flex-preferred-size: calc(50% - 15px);
+        flex-basis: calc(50% - 15px);
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1500px) {
+  body main .gallery .photo-card {
+    -ms-flex-preferred-size: calc(33% - 15px);
+        flex-basis: calc(33% - 15px);
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body main .gallery .photo-card {
+    -ms-flex-preferred-size: calc(25% - 15px);
+        flex-basis: calc(25% - 15px);
+  }
+}
+
+body main .gallery .photo-card:hover {
+  -webkit-box-shadow: 0px 0px 22px 14px rgba(242, 255, 77, 0.88), 0px 0px 31px 17px rgba(0, 160, 255, 0.68);
+  box-shadow: 0px 0px 22px 14px rgba(242, 255, 77, 0.88), 0px 0px 31px 17px rgba(0, 160, 255, 0.68);
+}
+
+body main .gallery .photo-card img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: calc(100% - 66.8px);
+}
+
+body main .gallery .photo-card .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
+}
+
+body footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: aqua;
+}
+
+body footer .load-more {
+  height: 36px;
+  border-radius: 18px;
+  padding: 0 20px;
+  border: 1px solid #0011ff;
+}
+
+body footer .load-more:hover, body footer .load-more:focus {
+  border-color: #15ff00;
+}
+/*# sourceMappingURL=index.css.map */
